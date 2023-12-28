@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="text-align: center; padding-top: 100px">
+      <h1>Find Student</h1>
+      <input type="text" id="string-input" />
+      <button id="search-btn">Search</button>
+      <h3 id="all-students"></h3>
+      <h2 id="result" style="font-size: 50px; padding-top: 20px"></h2>
+    </div>
+    <script>
+      var students = [
+        "Yarob",
+        "Ahmad",
+        "Khaled",
+        "Omar",
+        "Jaber",
+        "Sami",
+        "Salem",
+      ];
+
+      for (var i = 0; i < students.length; i++) {
+        document.getElementById(
+          "all-students"
+        ).innerHTML += `${students[i]} -- `;
+      }
+
+      document
+        .getElementById("search-btn")
+        .addEventListener("click", function () {
+          var text = document.getElementById("string-input").value;
+          document.getElementById(
+            "result"
+          ).innerHTML = `${text.toLowerCase()} is NOT in the school  <br>`;
+          for (var k = 0; k < students.length; k++) {
+            if (text.toLowerCase() == students[k].toLowerCase()) {
+              document.getElementById(
+                "result"
+              ).innerHTML = `${text.toLowerCase()} is in the school <br>`;
+            }
+            // else {
+            //   document.getElementById(
+            //     "result"
+            //   ).innerHTML += `${text.toLowerCase()} is NOT in the school  <br>`;
+            // }
+          }
+        });
+
+      //   var school = ["T.Yarob", "T.Ahmad", "khaled", "omar", "jaber"];
+
+      //   for (var memberIndex = 0; memberIndex < school.length; memberIndex++) {
+      //     if (school[memberIndex][0] == "T") {
+      //       document.getElementById("school").innerHTML +=
+      //         school[memberIndex] + " <br> ";
+      //     }
+      //   }
+
+      //   var school = ["T.Yarob", "T.Ahmad", "khaled", "omar", "jaber"];
+
+      //   for (var memberIndex = 0; memberIndex < school.length; memberIndex++) {
+      //     // console.log(school[i].startsWith("T"));
+      //     if (school[memberIndex].startsWith("T")) {
+      //       document.getElementById("school").innerHTML +=
+      //         school[memberIndex] + " - ";
+      //     }
+      //   }
+
+      //   document.getElementById("submit").addEventListener("click", function () {
+      //     document.getElementById("result").innerHTML = "";
+
+      //     var text = document.getElementById("string-input").value;
+
+      //     var vowelLetters = ["a", "e", "i", "o", "u"];
+      //     for (var char of text) {
+      //       if (!vowelLetters.includes(char.toLowerCase())) {
+      //         char = char;
+      //         document.getElementById("result").innerHTML += `${char} <br>`;
+      //         document.getElementById("string-input").value = "";
+      //       } else {
+      //         char = char.toLowerCase();
+      //       }
+      //     }
+      //   });
+
+      //   document.getElementById("submit").addEventListener("click", function () {
+      //     var text = document.getElementById("string-input").value;
+      //     var vowelLetters = ["a", "e", "i", "o", "u"];
+      //     for (var char of text) {
+      //       if (vowelLetters.includes(char.toLowerCase())) {
+      //         char = char.toLowerCase();
+      //       } else {
+      //         char = char;
+      //       }
+
+      //       if (
+      //         char != "a" &&
+      //         char != "e" &&
+      //         char != "i" &&
+      //         char != "o" &&
+      //         char != "u"
+      //       ) {
+      //         document.getElementById("result").innerHTML += `${char} <br>`;
+      //       }
+      //     }
+      //   });
+      //   document.getElementById("submit").addEventListener("click", function () {
+      //     var text = document.getElementById("string-input").value;
+      //     for (i = 0; i < inputString.length; i++) {
+      //       var vowelLetters = ["a", "e", "i", "o", "u"];
+
+      //       if (!vowelLetters.includes(text[i])) {
+      //         document.getElementById("result").innerHTML += `${text[i]}<br>`;
+      //       }
+      //     }
+      //   });
+    </script>
+  </body>
+</html>

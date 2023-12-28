@@ -8,48 +8,112 @@
   <body>
     <h1>file 2(test)</h1>
     <div id="students" style="font-size: 30px"></div>
-
+    <!-- <div style="text-align: center; margin-top: 100px">
+      <input type="text" id="student-input" />
+      <button id="add-student-btn">Submit</button>
+      <button id="delete-student-btn">Delete</button>
+      <div id="students" style="font-size: 30px"></div>
+    </div> -->
+    <div style="display: flex; justify-content: center; align-items: center">
+      <div id="result"></div>
+    </div>
     <script>
-      var arr = [10, 100, 50, 40, 90, 70, 20];
-      console.log(arr);
-      arr.shift();
-      console.log(arr);
-      arr.shift();
-      console.log(arr);
-      arr.unshift(200);
-      console.log(arr);
-      console.log(arr.reverse());
-      //   console.log(arr.indexOf(500));
-      //   console.log(arr.includes(500));
+              for (i = 0; i <= 30; i++) {
+                var multiplication = 10 * i;
+                document.getElementById(
+                  "result"
+                ).innerHTML += `<h1>10 X ${i} = ${multiplication}</h1>`;
+                console.log(`10 X ${i} = ${multiplication}`); // if (i % 2 == 0) {
+                //   console.log(i);
+                // }
+              }
+              //   for (i = 0; i <= 500; i++) {
+              //     if (i % 2 == 0) {
+              //       console.log(i);
+              //     }
+              //   }
+              //   for (i = 0; i <= 500; i++) {
+              //     console.log(i % 2);
+              // //   }
 
-      //   Array.isArray(arr);
-      //   console.log(typeof Array.isArray(arr));
+              //   for (var i = 0; i <= 1000; i++) {
+              //     console.log(i);
+              //   }
+              var name = "Tarmeez";
 
-      //   var students = ["yarob", "khaled", "mohmad", "omar", "sami"];
-      //   document.getElementById("students").innerHTML = students;
-      //   console.log(students);
-      //   students.splice(2, 2, "salem");
-      //   console.log(students);
-      //   students.splice(2, 0, "fadi");
-      //   console.log(students);
-      //   students.splice(2, 0, "fadi", "fawzi", "jaber");
-      //   console.log(students);
-      //   var students = ["yarob", "khaled", "ahmad", "mohmad", "omar"];
-      //   document.getElementById("students").innerHTML = students;
-      //   console.log(students.push("ramzi"));
-      //   console.log(students.push("dani"));
-      //   students[1] = "dia";
-      //   console.log(students);
-      //   students.pop();
-      //   console.log(students);
-      //   var st = "yarob";
-      //   var st2 = "mohamad";
-      //   var st3 = "khaled";
-      //   var st4 = "ahmad";
-      //   var st5 = "akram";
+      for (var i of name) {
+        console.log(i);
+      }
 
-      //   document.getElementById("student").innerHTML = st;
-      //   document.getElementById("student").innerHTML += " " + st2;
+      //   for (var i in name) {
+      //     console.log(name[i]);
+      //   }
+      //   for (var i = 0; i < name.length; i++) {
+      //     console.log(name[i]);
+      //   }
+      //   console.log(name[0]);
+      //   console.log(name[1]);
+      //   console.log(name[2]);
+      //   console.log(name[3]);
+              //   var students = [];
+              //   var result = document.getElementById("students");
+              //   document
+              //     .getElementById("add-student-btn")
+              //     .addEventListener("click", function () {
+              //       var studentName = document.getElementById("student-input").value;
+
+              //       students.push(studentName);
+
+              //       result.innerHTML = students;
+              //       document.getElementById("student-input").value = "";
+              //     });
+              //   document
+              //     .getElementById("delete-student-btn")
+              //     .addEventListener("click", function () {
+              //       students.pop();
+              //       result.innerHTML = students;
+              //     });
+            <script>
+              var arr = [10, 100, 50, 40, 90, 70, 20];
+              console.log(arr);
+              arr.shift();
+              console.log(arr);
+              arr.shift();
+              console.log(arr);
+              arr.unshift(200);
+              console.log(arr);
+              console.log(arr.reverse());
+              //   console.log(arr.indexOf(500));
+              //   console.log(arr.includes(500));
+
+              //   Array.isArray(arr);
+              //   console.log(typeof Array.isArray(arr));
+
+              //   var students = ["yarob", "khaled", "mohmad", "omar", "sami"];
+              //   document.getElementById("students").innerHTML = students;
+              //   console.log(students);
+              //   students.splice(2, 2, "salem");
+              //   console.log(students);
+              //   students.splice(2, 0, "fadi");
+              //   console.log(students);
+              //   students.splice(2, 0, "fadi", "fawzi", "jaber");
+              //   console.log(students);
+              //   var students = ["yarob", "khaled", "ahmad", "mohmad", "omar"];
+              //   document.getElementById("students").innerHTML = students;
+              //   console.log(students.push("ramzi"));
+              //   console.log(students.push("dani"));
+              //   students[1] = "dia";
+              //   console.log(students);
+              //   students.pop();
+              //   console.log(students);
+              //   var st = "yarob";
+              //   var st2 = "mohamad";
+              //   var st3 = "khaled";
+              //   var st4 = "ahmad";
+              //   var st5 = "akram";
+
+              //   document.getElementById("student").innerHTML = st;
+              //   document.getElementById("student").innerHTML += " " + st2;
     </script>
   </body>
 </html>
